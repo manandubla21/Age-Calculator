@@ -60,15 +60,17 @@ btn.addEventListener("click", function () {
             console.log(dayOld);
 
             if (yearsOld < 1 && year == Tyear) {
-                alert("Beta Phele Chlna toh Lagja Computer chla raha hai")
-                dayOld = Tday - day;
+                //alert("Beta Phele Chlna toh Lagja Computer chla raha hai")
+                if (Tmonth == month) {
+                    dayOld = Tday - day;
+                }
                 let div = document.createElement("div")
                 div.className = "age"
                 div.innerHTML = `You are ${dayOld} days old`
                 main.appendChild(div)
             }
             else if (yearsOld < 1) {
-                alert("Beta Phele Chlna toh Lagja Computer chla raha hai")
+                //alert("Beta Phele Chlna toh Lagja Computer chla raha hai")
                 let div = document.createElement("div")
                 div.className = "age"
                 div.innerHTML = `You are ${monthsOld} months and ${dayOld} days old`
